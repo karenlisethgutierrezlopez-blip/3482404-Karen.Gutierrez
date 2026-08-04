@@ -12,7 +12,11 @@ public class Ejercicio1 {
         for (int i = 0; i < num; i++) {
             numeros[i] = Integer.parseInt(JOptionPane.showInputDialog("Ingrese los numeros que ingresara"));
 
-
+            if(numeros[i]%2==0){
+                pares++;
+            }else {
+                impares++;
+            }
 
         }
         JOptionPane.showMessageDialog(null, "Hay " +pares+" pares\n Hay " +impares+" impares");
