@@ -23,6 +23,7 @@ public class Ejercicio3{
                 menor = numeros[i];
             }
         }
+        JOptionPane.showMessageDialog(null, "El mayor es " + mayor +" el menor es " + menor);
     }
 
 }
