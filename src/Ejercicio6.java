@@ -31,5 +31,16 @@ public class Ejercicio6 {
                 "Votos del candidato A: " + A +
                         "\nVotos del candidato B: " + B +
                         "\nVotos del candidato C: " + C);
+
+        if (A > B && A > C) {
+            JOptionPane.showMessageDialog(null, "El ganador es el candidato A");
+        } else if (B > A && B > C) {
+            JOptionPane.showMessageDialog(null, "El ganador es el candidato B");
+        } else if (C > A && C > B) {
+            JOptionPane.showMessageDialog(null, "El ganador es el candidato C");
+        } else {
+            JOptionPane.showMessageDialog(null, "Hubo un empate");
+        }
+
     }
 }
