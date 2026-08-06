@@ -1,10 +1,10 @@
 import javax.swing.*;
 
 public class Ejercicio4 {
-    public static void main(String[] args){
-        int temperatura;
+    public static void main(String[] args) {
 
-        temperatura = Integer.parseInt(JOptionPane.showInputDialog("¿Cuántas temperaturas va a registrar?"));
+        String resultado = "Temperaturas\n";
+        int temperatura = Integer.parseInt(JOptionPane.showInputDialog("¿Cuántas temperaturas va a registrar?"));
 
         double temperaturas[] = new double[temperatura];
 
@@ -12,16 +12,16 @@ public class Ejercicio4 {
             temperaturas[i] = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la temperatura " + (i + 1)));
         }
 
-            for (int i = 0; i < temperatura; i++) {
+        for (int i = 0; i < temperatura; i++) {
 
-                if (temperaturas[i] < 10) {
-                    JOptionPane.showMessageDialog(null, "Temperatura: " + temperaturas[i] + "°C -> Frío");
-                } else if (temperaturas[i] <= 25) {
-                    JOptionPane.showMessageDialog(null, "Temperatura: " + temperaturas[i] + "°C -> Templado");
-                } else {
-                    JOptionPane.showMessageDialog(null, "Temperatura: " + temperaturas[i] + "°C -> Calor");
-
+            if (temperaturas[i] < 10) {
+                resultado += temperaturas[i] + " -> Frío\n";
+            } else if (temperaturas[i] >= 10 && temperaturas[i] <= 25) {
+                resultado += temperaturas[i] + " -> Templado\n";
+            } else {
+                resultado += temperaturas[i] + " -> Calor\n";
             }
         }
+        JOptionPane.showMessageDialog(null, resultado);
     }
 }
