@@ -11,5 +11,17 @@ public class Ejercicio4 {
         for (int i = 0; i < temperatura; i++) {
             temperaturas[i] = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la temperatura " + (i + 1)));
         }
+
+            for (int i = 0; i < temperatura; i++) {
+
+                if (temperaturas[i] < 10) {
+                    JOptionPane.showMessageDialog(null, "Temperatura: " + temperaturas[i] + "°C -> Frío");
+                } else if (temperaturas[i] <= 25) {
+                    JOptionPane.showMessageDialog(null, "Temperatura: " + temperaturas[i] + "°C -> Templado");
+                } else {
+                    JOptionPane.showMessageDialog(null, "Temperatura: " + temperaturas[i] + "°C -> Calor");
+
+            }
+        }
     }
 }
